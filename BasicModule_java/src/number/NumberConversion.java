@@ -69,7 +69,7 @@ public class NumberConversion {
 				System.out.println(r);
 				switch(r)
 				{
-				case 200:
+				case 100:
 				case 30:
 				case 80:
 				case 90:count=count+6;break;
