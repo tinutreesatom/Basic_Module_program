@@ -41,6 +41,7 @@ public class NumberConversion {
 				case 17:
 				case 14:count=count+9;break;
 				}
+				n=n/10;
 			}
 			if(n>=20 && n<=99)
 			{
@@ -51,26 +52,28 @@ public class NumberConversion {
 				case 20:
 				case 30:
 				case 80:
+				case 90:
 				count=count+6;break;
 				case 40:
 				case 50:
-				case 90:
+				//case 90:
 				case 60:count=count+5;break;
 				case 70:count=count+7;break;
 			
 					
 				}
-				
+				n=n/10;
 				
 			}
 			if(n>=100 && n<=999)
 			{
-				int r=(n/10)*10;
+				int r=(n/100)*100;
 				System.out.println(r);
-				switch(r)
+				count=count+7;
+				/*switch(r)
 				{
 				case 100:
-				case 30:
+				case 200:
 				case 80:
 				case 90:count=count+6;break;
 				case 40:
@@ -79,11 +82,11 @@ public class NumberConversion {
 				case 70:count=count+7;break;
 			
 					
-				}
-				//n=n/10;
+				}*/
+			n=n/10;
 				
 			}
-			n=n/10;
+			
 			
 		}
 			
