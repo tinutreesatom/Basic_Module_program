@@ -9,6 +9,7 @@ public class NumberConversion {
 		public static void main(String[] args) throws NumberFormatException, IOException
 		{
 		int n,count=0;
+		
 		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("Enter a number ");
 		n=Integer.parseInt(br.readLine());
