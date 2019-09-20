@@ -5,11 +5,7 @@ import java.io.IOException;
 
 
 public class RoomStatus {
-	String ac;
-	String cot;
-	String cable;
-	String wifi;
-	String laundry;
+	
 	public static int[] booked=new int[25];
 	//protected static int i=0;
 	public static void main(String [] args) throws IOException
@@ -26,7 +22,7 @@ public class RoomStatus {
 		
 		do 
 		{
-			
+			//Runtime.getRuntime().exec("CLS");
 		System.out.println("\n1.Book");
 		System.out.println("2.Check Status");
 		System.out.println("3.Exit");

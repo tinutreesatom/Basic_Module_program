@@ -10,7 +10,7 @@ public class NumberConversion {
 		{
 		int n,count=0;
 		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-		System.out.println("Enter the number ");
+		System.out.println("Enter a number ");
 		n=Integer.parseInt(br.readLine());
 		//System.out.println("Enter the fare collected for each vehicles");
 		while(n!=0)
@@ -31,6 +31,12 @@ public class NumberConversion {
 				case 3:
 				case 7:
 				case 8:count=count+5;break;//System.out.println("5");break;
+				}
+			}
+				if(n>10 && n<20)
+				{
+				switch(n)
+				{
 				case 11:
 				case 12:count=count+6;break;//System.out.println("6");break;
 				case 15:
@@ -41,7 +47,7 @@ public class NumberConversion {
 				case 17:
 				case 14:count=count+9;break;
 				}
-				n=n/10;
+				n=n/100;
 			}
 			if(n>=20 && n<=99)
 			{
@@ -62,7 +68,8 @@ public class NumberConversion {
 			
 					
 				}
-				n=n/10;
+				n=n%10;
+				//n=n/10;
 				
 			}
 			if(n>=100 && n<=999)
@@ -83,12 +90,11 @@ public class NumberConversion {
 			
 					
 				}*/
-			n=n/10;
+			n=n%100;
 				
 			}
 			
-			
-		}
+					}
 			
 		System.out.println("count= "+count);
 		
