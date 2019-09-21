@@ -14,12 +14,12 @@ public class CaseStudy6 {
 	public static String proofType;
 	public static String proofId;
 	static int regId=0;
+	public static UpdateEmail customer[]=new UpdateEmail[10];
 	public static void main(String[] args) throws IOException,NullPointerException
 	{
 		String ch;
 		int i=0;
 		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-		UpdateEmail customer[]=new UpdateEmail[10];
 		System.out.println("");
 		//UpdateEmail customer1=new UpdateEmail(name,address,contactNumber,email,proofType,proofId);
 		do
@@ -63,8 +63,13 @@ public class CaseStudy6 {
 		System.out.println("Customer ID \t Customer name");
 		for(int j=0;j<regId;j++)
 		{
-		System.out.println((j+1)+"\t\t\t"+customer[j].name);
+			display(j);
+		
 		}
+	}
+	private static void display(int j) {
+		// TODO Auto-generated method stub
+		System.out.println((j+1)+"\t\t\t"+customer[j].name);
 	}
 		
 /*	public void register() throws IOException {
