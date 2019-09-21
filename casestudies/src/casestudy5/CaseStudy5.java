@@ -63,7 +63,7 @@ public class CaseStudy5 {
 			Date endDate=formatter1.parse(eDate);
 			//Date date1=new SimpleDateFormat("dd/MM/yyyy").parse(day); 
 		//	Date d=new Date();
-			//Date d;
+			Date d;
 			for(int k=0;k<regId;k++)
 			{
 				d=customer[k].date;
