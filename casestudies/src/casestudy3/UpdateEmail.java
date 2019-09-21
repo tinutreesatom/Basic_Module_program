@@ -11,6 +11,7 @@ public class UpdateEmail {
 	public static String proofType;
 	public static String proofId;
 	static int regId=0;
+	public static String date;
 	/*public UpdateEmail(String name2, String address2, String contactNumber2, String email2, String proofType2,
 			String proofId2) {
 		// TODO Auto-generated constructor stub
