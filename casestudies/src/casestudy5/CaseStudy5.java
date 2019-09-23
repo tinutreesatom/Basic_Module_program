@@ -50,32 +50,11 @@ public class CaseStudy5 {
 			customer[i].proofId=br.readLine();
 			System.out.println("Enter the date of booking");
 			day=br.readLine();
-			//Date d=new SimpleDateFormat("dd/MM/yyyy").parse(date);
 			SimpleDateFormat formatter1=new SimpleDateFormat("dd/MM/yyyy");  
-			Date date1=formatter1.parse(day);
-			customer[i].date=date1;
-			System.out.println("View all bookings:");
-			System.out.println("Enter the starting date");
-			String sDate=br.readLine();
-			System.out.println("Enter the end date");
-			String eDate=br.readLine();
-			Date startDate=formatter1.parse(sDate);
-			Date endDate=formatter1.parse(eDate);
-			//Date date1=new SimpleDateFormat("dd/MM/yyyy").parse(day); 
-		//	Date d=new Date();
-			Date d;
-			for(int k=0;k<regId;k++)
-			{
-				d=customer[k].date;
-				for(int l=k+1;l<regId;l++)
-				{
-					if(d.after(startDate))
-					{
-						
-					}
-				}
-			}
-			System.out.println(date1);  
+			Date bookDate=formatter1.parse(day);
+			customer[i].date=bookDate;
+			//Date d=new SimpleDateFormat("dd/MM/yyyy").parse(date);
+			 
 			//Date date = new Date();
 			//System.out.println(date.toString());
 		//	GregorianCalendar date=new GregorianCalendar();
@@ -98,15 +77,45 @@ public class CaseStudy5 {
 				System.out.println("Thank you!");
 			System.out.println("Do you want to continue registration (y/n)?");
 			ch=br.readLine();
+			i++;
 			}
 			while(ch.equalsIgnoreCase("y"));
+			BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+			
+			SimpleDateFormat formatter1=new SimpleDateFormat("dd/MM/yyyy");  
+			//Date date1=formatter1.parse(day);
+			//customer[i].date=date1;
+			System.out.println("View all bookings:");
+			System.out.println("Enter the starting date");
+			String sDate=br.readLine();
+			System.out.println("Enter the end date");
+			String eDate=br.readLine();
+			Date startDate=formatter1.parse(sDate);
+			Date endDate=formatter1.parse(eDate);
+			//Date date1=new SimpleDateFormat("dd/MM/yyyy").parse(day); 
+		//	Date d=new Date();
+			Date d;
 			System.out.println("Customers list\nThe registered customers are");
 			System.out.println("Customer ID \t Customer name");
-			for(int j=0;j<regId;j++)
+			for(int k=0;k<regId;k++)
 			{
-				display(j);
-			
+				d=customer[k].date;
+				System.out.println(d);
+				
 			}
+		/*	for(int k=0;k<regId;k++)
+			{
+				d=customer[k].date;
+				System.out.println(d);
+				/*for(int l=k+1;l<regId;l++)
+				{*/
+					//if(d.after(startDate)&&(d.before(endDate)))
+					//{
+						//System.out.println(customer[k].regId+"\t"+customer[k].name);
+					//}
+				//}
+		//	}
+			//System.out.println(date1); 
 		}
 		private static void display(int j) {
 			// TODO Auto-generated method stub
