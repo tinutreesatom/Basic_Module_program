@@ -71,13 +71,14 @@ public class Customer extends Registration{
 			}
 		public static void allCustomers() {
 				// TODO Auto-generated method stub
+			
 			for(int k=0;k<=regId;k++)
 			{	System.out.println(reg[k].id+"\t"+reg[k].name);
 					
 			}
 		}
 		//	public static Customer customer=new Customer();
-public static void allBooking() throws IOException, ParseException {
+public static void allBooking() throws IOException, ParseException ,NullPointerException{
 	//Registration reg[]=new Registration[10];
 
 	BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
@@ -96,15 +97,28 @@ public static void allBooking() throws IOException, ParseException {
 				Date d;
 				System.out.println("The bookings made from "+ sDate+" to "+ eDate+" are");
 				System.out.println("Room No. \t Customer name");
+				int flag=0;
 				for(int k=0;k<=regId;k++)
 				{
+					//if(reg[k].date!=NULL)
 					d=reg[k].date;
+					//System.out.println("start date "+d.after(startDate));
+					//System.out.println("end date "+d.after(endDate));
 					if(d.after(startDate)&&(d.before(endDate)))
 						{
 							System.out.println(reg[k].id+"\t"+reg[k].name);
 						}
+					else
+					{
+						//System.out.println("No bookings on these days");
+						flag++;
+					}
 					
 			}
+				if(flag==regId)
+				{
+					System.out.println("No bookings on these days");
+				}
 }
 			
 }
