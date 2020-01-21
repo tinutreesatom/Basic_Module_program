@@ -44,21 +44,6 @@ public class CaseStudy6 {
 			ch=br.readLine();
 		}
 		while(ch.equalsIgnoreCase("y"));
-		/*System.out.println("Do you want to update the email id?(y/n):");
-		//do
-		//{
-		//System.out.println("Do you want to continue registration (y/n)?");
-		ch=br.readLine();
-		//}
-		//while(ch=='y' ||ch=='Y');
-		if(ch.equalsIgnoreCase("y"))
-		{	
-			System.out.println("Update Email\nEnter new email id:");
-			customer[i].email=br.readLine();
-			System.out.println("Email updated");
-			
-		}
-*/
 		System.out.println("Customers list\nThe registered customers are");
 		System.out.println("Customer ID \t Customer name");
 		for(int j=0;j<regId;j++)
@@ -72,44 +57,4 @@ public class CaseStudy6 {
 		System.out.println((j+1)+"\t\t\t"+customer[j].name);
 	}
 		
-/*	public void register() throws IOException {
-		// TODO Auto-generated method stub
-		String ch;
-		String name;
-		String address;
-		String contactNumber;
-		String email;
-		String proofType;
-		String proofId;
-		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-		System.out.println("Enter your name:");
-		this.name=br.readLine();
-		System.out.println("Enter your address:");
-		this.address=br.readLine();
-		System.out.println("Enter your contact number:");
-		this.contactNumber=br.readLine();
-		System.out.println("Enter your email:");
-		this.email=br.readLine();
-		System.out.println("Enter your proof type:");
-		this.proofType=br.readLine();
-		System.out.println("Enter your proof id:");
-		this.proofId=br.readLine();
-		regId++;
-		System.out.println("Do you want to update the email id?(y/n):");
-		//do
-		//{
-		//System.out.println("Do you want to continue registration (y/n)?");
-		ch=br.readLine();
-		//}
-		//while(ch=='y' ||ch=='Y');
-		if(ch.equalsIgnoreCase("y"))
-		{	
-			System.out.println("Update Email\nEnter new email id:");
-			this.email=br.readLine();
-			System.out.println("Email updated");
-		}
-		
-	}
-*/
-
 }

@@ -5,33 +5,45 @@ public class SeasonBooking extends Booking{
 	int total_Days;
 	double tariff;
 	String roomType;
-	public void setRoomType(String roomType) {
-		this.roomType=roomType;
+	
+	public int getPersons() {
+		return persons;
 	}
-	public void setTariff(double tariff2) {
-		this.tariff=tariff2;
-		
+
+	public void setPersons(int persons) {
+		this.persons = persons;
 	}
-	public void setTotalDays(int totalDays) {
-		this.total_Days=totalDays;
+
+	public int getTotal_Days() {
+		return total_Days;
 	}
-	public void setPerson(int prsn) {
-		this.persons=prsn;
-		
+
+	public void setTotal_Days(int total_Days) {
+		this.total_Days = total_Days;
 	}
-	public int getPerson() {
-		return this.persons;
-		
-	}
-	public int getTotalDays()
-	{
-		return this.total_Days;
-	}
+
 	public double getTariff() {
-		return this.tariff;
+		return tariff;
 	}
-	public String getRoomType()
+
+	public void setTariff(double tariff) {
+		this.tariff = tariff;
+	}
+
+	public String getRoomType() {
+		return roomType;
+	}
+
+	public void setRoomType(String roomType) {
+		this.roomType = roomType;
+	}
+
+	double roomBooking(int persons, int total_Days, double tariff, String roomType)
 	{
-		return this.roomType;
+		double tot_tariff=super.roomBooking(persons, total_Days, tariff, roomType);
+		return tot_tariff;
 	}
+	
+	
+	
 }

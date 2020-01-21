@@ -103,19 +103,28 @@ public class CaseStudy5 {
 				System.out.println(d);
 				
 			}
-		/*	for(int k=0;k<regId;k++)
+			int flag=0;
+			for(int k=0;k<=regId;k++)
 			{
+				//if(reg[k].date!=NULL)
 				d=customer[k].date;
-				System.out.println(d);
-				/*for(int l=k+1;l<regId;l++)
-				{*/
-					//if(d.after(startDate)&&(d.before(endDate)))
-					//{
-						//System.out.println(customer[k].regId+"\t"+customer[k].name);
-					//}
-				//}
-		//	}
-			//System.out.println(date1); 
+				//System.out.println("start date "+d.after(startDate));
+				//System.out.println("end date "+d.after(endDate));
+				if(d.after(startDate)&&(d.before(endDate)))
+					{
+						System.out.println(regId+"\t"+customer[k].date);
+					}
+				else
+				{
+					//System.out.println("No bookings on these days");
+					flag++;
+				}
+				
+		}
+			if(flag==regId)
+			{
+				System.out.println("No bookings on these days");
+			}
 		}
 		private static void display(int j) {
 			// TODO Auto-generated method stub

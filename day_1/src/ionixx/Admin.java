@@ -65,16 +65,18 @@ public class Admin {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				//JTable tab=new J
+				
+				ConnectionManager conM=new ConnectionManager();
 				DefaultTableModel model = new DefaultTableModel();
 			    //Container cnt = this.getContentPane();
 			    JTable jtbl = new JTable(model);
-			    
+			    jtbl.setBounds(100, 300, 500, 200);
 				model.addColumn("Product Id");
 				model.addColumn("Product Name");
 				model.addColumn("Min Sell Quantity");
 				model.addColumn("Price");
 				model.addColumn("Quantity");
-				ConnectionManager conM=new ConnectionManager();
+				
 				try
 				{
 					
@@ -88,7 +90,8 @@ public class Admin {
 						//for(int j=0;j<)
 						model.addRow(new Object[] {res.getString("product_id"),res.getString("product_name"),res.getString("min_sell_quantity"),res.getString("price"),res.getString("quantity")});
 					}
-					jtbl.setBounds(100, 300, 500, 200);
+					jtbl.setModel(model);
+					
 					adminf.add(jtbl);
 					
 				}
@@ -108,54 +111,81 @@ public class Admin {
 				
 				addpd=new JLabel("Add product");
 				addpd.setBounds(150, 220, 200, 30);
-				adminf.add(addpd);
+				
 				
 				pdId=new JLabel("Product Id");
 				pdId.setBounds(50, 300, 200, 30);
-				adminf.add(pdId);				
+							
 				JTextField idTxt=new JTextField();
 				idTxt.setBounds(300,300, 100, 30);
-				adminf.add(idTxt);
+				
 				
 				pdName=new JLabel("Product Name");
 				pdName.setBounds(50, 350, 200, 30);
-				adminf.add(pdName);				
+							
 				JTextField nameTxt=new JTextField();
 				nameTxt.setBounds(300,350, 100, 30);
-				adminf.add(nameTxt);
+				
 				
 				pdMinSell=new JLabel("Min sell Quantity");
 				pdMinSell.setBounds(50, 400, 200, 30);
-				adminf.add(pdMinSell);				
+							
 				JTextField minSellTxt=new JTextField();
 				minSellTxt.setBounds(300,400, 100, 30);
-				adminf.add(minSellTxt);
 				
 				pdPrice=new JLabel("Price");
 				pdPrice.setBounds(50, 450, 200, 30);
-				adminf.add(pdPrice);				
+							
 				JTextField priceTxt=new JTextField();
 				priceTxt.setBounds(300,450, 100, 30);
-				adminf.add(priceTxt);
+				
 				
 				pdQunat=new JLabel("Quantity");
 				pdQunat.setBounds(50, 500, 200, 30);
-				adminf.add(pdQunat);				
+								
 				JTextField quantTxt=new JTextField();
 				quantTxt.setBounds(300,500, 100, 30);
-				adminf.add(quantTxt);
+				
 				
 				pdMob=new JLabel("Mob No.");
 				pdMob.setBounds(50, 550, 200, 30);
-				adminf.add(pdMob);				
+								
 				JTextField mobTxt=new JTextField();
 				mobTxt.setBounds(300,550, 100, 30);
-				adminf.add(mobTxt);
+				
 				
 				
 				JButton addBtn=new JButton("Add");
 				addBtn.setBounds(150, 600, 100, 30);
+				
+				adminf.add(addpd);
+				adminf.add(mobTxt);
 				adminf.add(addBtn);	
+				adminf.add(pdMob);
+				adminf.add(quantTxt);
+				adminf.add(pdQunat);
+				adminf.add(priceTxt);
+				adminf.add(pdPrice);	
+				adminf.add(pdMinSell);	
+				adminf.add(minSellTxt);
+				adminf.add(nameTxt);
+				adminf.add(pdName);	
+				adminf.add(idTxt);
+				adminf.add(pdId);	
+				idTxt.setVisible(true);
+				addpd.setVisible(true);
+				addBtn.setVisible(true);
+				pdMob.setVisible(true);
+				
+				quantTxt.setVisible(true);
+				pdQunat.setVisible(true);
+				priceTxt.setVisible(true);
+				pdMinSell.setVisible(true);
+				
+				minSellTxt.setVisible(true);
+				nameTxt.setVisible(true);
+				pdName.setVisible(true);
+				pdId.setVisible(true);
 				addBtn.addActionListener(new ActionListener() {
 					
 					@Override
@@ -194,10 +224,11 @@ public class Admin {
 			}
 		});
 		
-		adminf.setDefaultCloseOperation(adminf.EXIT_ON_CLOSE);
-		adminf.setLayout(null);
-		adminf.setSize(600, 1000);
-		adminf.setVisible(true);
 		
+		adminf.setLayout(null);
+		//adminf.pack();
+		adminf.setVisible(true);
+		adminf.setSize(600, 1000);
+		adminf.setDefaultCloseOperation(adminf.EXIT_ON_CLOSE);
 	}
 }

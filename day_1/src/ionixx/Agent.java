@@ -96,14 +96,15 @@ public class Agent {
 					model.addColumn("Quantity");
 					model.addColumn("Price");
 					model.addColumn("Total cost");
-					jtbl.setModel(model);
+					
 					while(res.next())
 					{
 						int i=0;
 						//for(int j=0;j<)
 						model.addRow(new Object[] {res.getString("agent.product_id"),res.getString("product_name"),res.getString("transaction"),res.getString("quantity"),res.getString("price"),res.getString("total_price")});
 					}
-				//	agentf.add(jtbl);
+					jtbl.setModel(model);
+					agentf.add(jtbl);
 					
 				}
 				catch (Exception ex) {
